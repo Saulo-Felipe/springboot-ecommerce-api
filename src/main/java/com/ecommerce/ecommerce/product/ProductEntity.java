@@ -1,5 +1,8 @@
 package com.ecommerce.ecommerce.product;
 
+import com.ecommerce.ecommerce.product.DTOs.CreateProductDTO;
+import com.ecommerce.ecommerce.product.DTOs.UpdateProductDTO;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -19,12 +22,10 @@ import lombok.NoArgsConstructor;
 public class ProductEntity {
     @Id @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
-
     private String title;
     private Float price;
     private String image_url;
     private Integer amount;
-
     @Enumerated(EnumType.STRING)
     private ProductType type;
 
@@ -34,5 +35,27 @@ public class ProductEntity {
         this.image_url = newProduct.image_url();
         this.price = newProduct.price();
         this.type = newProduct.type();
+    }
+
+    public void update(UpdateProductDTO product) {
+        if (product.title() != null) {
+            this.title = product.title();
+        }
+
+        if (product.image_url() != null) {
+            this.image_url = product.image_url();
+        }
+
+        if (product.amount() != null) {
+            this.amount = product.amount();
+        }
+
+        if (product.price() != null) {
+            this.price = product.price();
+        }
+
+        if (product.type() != null) {
+            this.type = product.type();
+        }
     }
 }

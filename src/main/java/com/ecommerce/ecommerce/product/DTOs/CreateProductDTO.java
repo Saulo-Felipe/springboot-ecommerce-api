@@ -1,4 +1,6 @@
-package com.ecommerce.ecommerce.product;
+package com.ecommerce.ecommerce.product.DTOs;
+
+import com.ecommerce.ecommerce.product.ProductType;
 
 import jakarta.persistence.Enumerated;
 import jakarta.validation.constraints.NotBlank;
