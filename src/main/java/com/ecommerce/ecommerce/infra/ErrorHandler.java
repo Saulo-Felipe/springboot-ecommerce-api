@@ -27,4 +27,14 @@ public class ErrorHandler {
             .status(400)
             .body(data.getAllErrors().stream().map(item -> item.getDefaultMessage()));
     }
+
+    // @ExceptionHandler(Exception.class)
+    // public ResponseEntity<Object> genericException() {
+    //     HashMap<String, Object> response = new HashMap<>();
+
+    //     response.put("error", true);
+    //     response.put("message", "Ocorreu um erro desconhecido");
+
+    //     return ResponseEntity.status(500).body(response);
+    // }
 }
