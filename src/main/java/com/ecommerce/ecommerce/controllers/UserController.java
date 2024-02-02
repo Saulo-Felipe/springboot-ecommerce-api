@@ -44,7 +44,7 @@ public class UserController {
         );
         Authentication auth = this.manager.authenticate(tokenData);
 
-        String token = this.tokenService.generateToken(data.username());
+        String token = this.tokenService.generateToken((UserEntity) auth.getPrincipal());
 
         return ResponseEntity
             .status(token == null ? 204 : 200)
