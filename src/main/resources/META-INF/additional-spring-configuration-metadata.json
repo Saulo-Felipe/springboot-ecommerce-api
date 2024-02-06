@@ -1,5 +1,5 @@
 {"properties": [{
-  "name": "api.security.secret",
+  "name": "api.security.token",
   "type": "java.lang.String",
-  "description": "variavel de ambiente para o secret do jwt"
+  "description": "A description for 'api.security.token'"
 }]}

@@ -1,8 +1,0 @@
-CREATE TABLE products (
-    id VARCHAR(255) PRIMARY KEY,
-    title VARCHAR(255) NOT NULL,
-    price DECIMAL(10, 2) NOT NULL,
-    image_url VARCHAR(999) NOT NULL,
-    amount INTEGER NOT NULL,
-    type VARCHAR(100) NOT NULL
-);
